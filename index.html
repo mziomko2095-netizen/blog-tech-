@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Outsourcing Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="#" class="logo" id="logo-home">Tech Blog</a>
+    <button class="hamburger" aria-label="Menu Opcje">☰</button>
+  </div>
+
+  <ul class="nav-list" id="dropdown-menu">
+    <li><a href="#" id="nav-home">Aktualności</a></li>
+    <li><a href="#" id="nav-articles">Artykuły</a></li>
+    <li><a href="#" id="nav-tech">Technologie</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-btn">Dark</button>
+  </div>
+</nav>
+
+<main class="grid" id="main-view">
+  <section id="articles-container">
+    <h2>Najnowsze Artykuły</h2>
+    <p style="margin-bottom: 15px; color: gray;">Kliknij w wybraną kartę poniżej, aby wyświetlić artykuł i sekcję komentarzy.</p>
+    
+    <div class="cards" id="cards-grid">
+      </div>
+  </section>
+
+  <aside id="tech-sidebar">
+    <h2>Tech Stack</h2>
+    <ul>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Docker</li>
+      <li>Kubernetes</li>
+    </ul>
+  </aside>
+</main>
+
+<div class="view-section" id="article-view">
+  <button id="back-btn" style="background: var(--card); color: var(--text); margin-bottom: 15px;">← Powrót do listy</button>
+  
+  <article class="article-content" id="single-article-content">
+    </article>
+
+  <section class="comments-section">
+    <h2>Komentarze do artykułu</h2>
+
+    <form id="comment-form">
+      <label for="name">Imię i nazwisko:</label>
+      <input id="name" placeholder="Np. Jan Kowalski" required>
+
+      <label for="email">Adres E-mail:</label>
+      <input id="email" type="email" placeholder="Format: nazwa@domena.pl" required>
+
+      <label for="rating">Twoja ocena artykułu (1-10):</label>
+      <input id="rating" type="number" min="1" max="10" placeholder="Skala od 1 do 10" required>
+
+      <label for="text">Treść komentarza:</label>
+      <textarea id="text" placeholder="Napisz opinię o artykule..." required></textarea>
+      
+      <button type="submit" class="primary-btn">Dodaj komentarz</button>
+    </form>
+
+    <div id="comments-list"></div>
+  </section>
+</div>
+
+<footer style="text-align:center; padding:30px; background: var(--card); margin-top: 40px;">
+  &copy; 2026 Blog Technologiczny. Wszelkie prawa zastrzeżone.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
