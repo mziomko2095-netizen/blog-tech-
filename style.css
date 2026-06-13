@@ -315,3 +315,72 @@ input:focus, textarea:focus {
     font-size: 1.1rem;
   }
 }
+
+/* STYLIZACJA SEKCJI AKTUALNOŚCI */
+.news-box {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--nav) 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.news-box h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.news-box p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.newsletter-inline {
+  display: flex;
+  gap: 10px;
+  background: transparent;
+  padding: 10px 0 0 0;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.newsletter-inline input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px;
+}
+
+.newsletter-inline input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-inline input:focus {
+  outline: 2px solid white;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.news-btn {
+  background: white;
+  color: var(--nav);
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.news-btn:hover {
+  background: var(--bg);
+  transform: translateY(-2px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

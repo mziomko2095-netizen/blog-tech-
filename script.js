@@ -93,7 +93,11 @@ function showArticle(id) {
 
 document.getElementById('back-btn').onclick = showHome;
 document.getElementById('logo-home').onclick = (e) => { e.preventDefault(); showHome(); };
-document.getElementById('nav-home').onclick = (e) => { e.preventDefault(); showHome(); };
+document.getElementById('nav-home').onclick = (e) => { 
+  e.preventDefault(); 
+  showHome();
+  document.getElementById('news-section').scrollIntoView({ behavior: 'smooth' });
+};
 document.getElementById('nav-articles').onclick = (e) => { 
   e.preventDefault(); 
   showHome();
@@ -181,7 +185,7 @@ window.deleteComment = (id) => {
   renderComments();
 };
 
-/* OBSERVER ANIMACJI KART */
+/* OBSERWATOR ANIMACJI KART */
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -192,3 +196,14 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 cards.forEach(c => observer.observe(c));
+
+/* OBSŁUGA NEWSLETTERA */
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+  newsletterForm.onsubmit = (e) => {
+    e.preventDefault();
+    const emailInput = document.getElementById('news-email').value;
+    alert(`Dziękujemy za zapis! Powiadomienia będą wysyłane na adres: ${emailInput}`);
+    newsletterForm.reset();
+  };
+}

@@ -27,7 +27,21 @@
 
 <main class="grid" id="main-view">
   <section id="articles-container">
-    <h2>Najnowsze Artykuły</h2>
+    
+    <div id="news-section" class="news-box">
+      <h2>📢 Aktualności</h2>
+      <p>Hej! Już za tydzień kolejny artykuł!</p>
+      <p><strong>Nie przegap!</strong> Będziemy rozstrzygać gorący temat: <em>Czy AI zabierze nam pracę, czy to tylko mit?</em> Przeanalizujemy fakty, dane rynkowe i opinie ekspertów.</p>
+      <p>Chcesz być na bieżąco z najnowszymi wpisami? Zapisz się do naszego newslettera, aby dostawać powiadomienia o nowych artykułach bezpośrednio na swoją skrzynkę!</p>
+      
+      <form id="newsletter-form" class="newsletter-inline">
+        <label for="news-email" class="sr-only">Twój adres e-mail:</label>
+        <input id="news-email" type="email" placeholder="Wpisz swój e-mail..." required>
+        <button type="submit" class="news-btn">Zapisz się</button>
+      </form>
+    </div>
+
+    <h2 style="margin-top: 30px;">Najnowsze Artykuły</h2>
     <p style="margin-bottom: 15px; color: gray;">Kliknij w wybraną kartę poniżej, aby wyświetlić artykuł i sekcję komentarzy.</p>
     
     <div class="cards" id="cards-grid">
@@ -35,7 +49,7 @@
   </section>
 
   <aside id="tech-sidebar">
-    <h2>Tech Stack</h2>
+    <h2>Najmodniejszy Tech Stack w 2026 roku</h2>
     <ul>
       <li>JavaScript</li>
       <li>Python</li>
